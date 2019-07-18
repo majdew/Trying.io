@@ -5,10 +5,17 @@
  */
 package trying.io;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author majd1
  */
 public class BasicClass {
+    private String userText;
+    private ArrayList<String> listOFError;
+    
+    
+    
     
 }
