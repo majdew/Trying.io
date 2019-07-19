@@ -28,6 +28,27 @@ public class BasicClass {
         this.userText = userText;
         this.listOfError = listOFError;
     }
+    
+        //this method is used to return the text written by the user
+    public String getUserText() {
+        return userText;
+    }
+
+    
+    //this method is used to assign the text written by the user to the member varriable userText
+    public void setUserText(String userText) {
+        this.userText = userText;
+    }
+
+    
+    //this method is used to return a list of errors which the user  made
+    public ArrayList<String> getListOfError() {
+        return listOfError;
+    }
+    //this method is used to assign the list of errors  written by the user to the member varriable listOFError 
+    public void setListOFError(ArrayList<String> listOfError) {
+        this.listOfError = listOfError;
+    }
 
 
 }
