@@ -13,14 +13,14 @@ import java.util.ArrayList;
  */
 public class BasicClass {
     private String userText;
-    private ArrayList<String> listOfError;
+    private ArrayList<String> listOFError;
 
     
     
     // this method is used to create object of the basic class 
-    public BasicClass(String userText, ArrayList<String> listOFError) {
+    public BasicClass(String userText, ArrayList<String> listOfError) {
         this.userText = userText;
-        this.listOfError = listOfError;
+        this.listOFError = listOFError;
     }
 
     
@@ -37,12 +37,21 @@ public class BasicClass {
 
     
     //this method is used to return a list of errors which the user  made
+<<<<<<< Updated upstream
     public ArrayList<String> getListOFError() {
-        return listOfError;
+        return listOFError;
     }
     //this method is used to assign the list of errors  written by the user to the member varriable listOFError 
     public void setListOFError(ArrayList<String> listOFError) {
-        this.listOfError = listOFError;
+        this.listOFError = listOFError;
+=======
+    public ArrayList<String> getListOfError() {
+        return listOfError;
+    }
+    //this method is used to assign the list of errors  written by the user to the member varriable listOFError 
+    public void setListOfError(ArrayList<String> listOfError) {
+        this.listOfError = listOfError;
+>>>>>>> Stashed changes
     }
     
     
