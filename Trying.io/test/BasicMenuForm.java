@@ -53,7 +53,7 @@ public class BasicMenuForm extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setText("Exist");
+        jButton3.setText("Exit");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
