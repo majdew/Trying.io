@@ -22,5 +22,12 @@ public class BasicClass {
  
     private String userText;
     private ArrayList<String> listOfError;
+    
+    // this method is used to create object of the basic class 
+    public BasicClass(String userText, ArrayList<String> listOFError) {
+        this.userText = userText;
+        this.listOfError = listOFError;
+    }
+
 
 }
