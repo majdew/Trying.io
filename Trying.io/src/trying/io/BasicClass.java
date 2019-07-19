@@ -5,6 +5,8 @@
  */
 package trying.io;
 
+import java.util.ArrayList;
+
 
 
 /**
@@ -18,5 +20,7 @@ package trying.io;
 
 public class BasicClass {
  
-    
+    private String userText;
+    private ArrayList<String> listOfError;
+
 }
