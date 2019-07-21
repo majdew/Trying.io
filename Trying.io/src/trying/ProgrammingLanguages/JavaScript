@@ -1,0 +1,6 @@
+<script type="text/javascript">
+function showAlert() {
+var msg = 'Your message here';
+alert (msg);
+}
+</script>
