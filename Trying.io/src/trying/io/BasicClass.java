@@ -25,6 +25,7 @@ public class BasicClass {
  
     private ArrayList<Character> userTypedChars;
     private HashMap<Character,Integer> charErrors;
+    private int numberOfTypedChars;
     
     
     // method for return all typed characters 
@@ -52,6 +53,17 @@ public class BasicClass {
         else{         
             charErrors.put(errorChar, 1);
         } 
+    }
+    
+    //method that return integer represent number of typed characters takes no parameter
+    public int getNumberOfTypedChars() {
+        return numberOfTypedChars;
+    }
+
+    
+    // method  that takes intger value as parameter represent number of typed characters and no return value
+    public void setNumberOfTypedChars(int numberOfTypedChars) {
+        this.numberOfTypedChars = numberOfTypedChars;
     }
     
     // this method is used to create object of the basic class 
