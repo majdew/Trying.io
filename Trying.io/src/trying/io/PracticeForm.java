@@ -188,9 +188,12 @@ public class PracticeForm extends javax.swing.JFrame {
         
         // creating object of timer task to perform a task when the timer starts
         TimerTask timerTask=new TimerTask() {
+            // varible to check if the minute is over 
+            int timeRemain=59;
             @Override
             public void run() {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                
+               
             }
         }
     }//GEN-LAST:event_jButton2ActionPerformed
