@@ -8,6 +8,7 @@
 package trying.io;
 
 import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  *
@@ -184,6 +185,14 @@ public class PracticeForm extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        
+        // creating object of timer task to perform a task when the timer starts
+        TimerTask timerTask=new TimerTask() {
+            @Override
+            public void run() {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
