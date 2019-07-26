@@ -120,19 +120,28 @@ public class BasicClass {
     }
     
     
-
-    
-    
-    
- 
- 
-    
- 
-
-    
-
-
-    
-
-
+    // method has no return value takes arraylist of characters represent the orginal text it compare user typed chars with orginal chars set error list and number of uncorrected chars
+  
+    public void compare(ArrayList<Character>orginalText){
+        if(userTypedChars.size()<=orginalText.size()){
+            for (int i=0;i<userTypedChars.size();i++){
+                if(!userTypedChars.get(i).equals(orginalText.get(i))){
+                    numberOfUncorrectChars++;
+                    char currentChar= orginalText.get(i);
+                    setCharErrors(currentChar);
+                }
+            }
+        }
+        else if(orginalText.size()<userTypedChars.size()){
+            int i;
+            for(i=0;i<orginalText.size();i++){
+                if(!userTypedChars.get(i).equals(orginalText.get(i)))
+                    numberOfUncorrectChars++;
+            }
+            for(i=orginalText.size()-1;i<userTypedChars.size();i++){
+                setCharErrors(userTypedChars.get(i));   
+            }
+        }
+            
+        }
 }
