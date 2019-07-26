@@ -192,7 +192,11 @@ public class PracticeForm extends javax.swing.JFrame {
             int timeRemain=59;
             @Override
             public void run() {
+                //display the timeRemain in the time label
+                timeLabel.setText("00:"+timeRemain);
                 
+                // decreases the remaining time by 1
+                timeRemain--;
 
                     
                
