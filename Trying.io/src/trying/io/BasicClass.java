@@ -6,6 +6,7 @@
 package trying.io;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 
 
@@ -23,6 +24,7 @@ import java.util.ArrayList;
 public class BasicClass {
  
     private ArrayList<Character> userTypedChars;
+    private HashMap<Character,Integer> charErrors;
     
     
     // method for return all typed characters 
@@ -32,6 +34,24 @@ public class BasicClass {
     // method for assign value to the member variable userTypedChars
     public void setUserTypedChars(ArrayList<Character> userTypedChars) {
         this.userTypedChars = userTypedChars;
+    }
+    // method that returns all uncorected errors as keys and values , key represent uncorected character and value number of error for each character
+    public String getCharErrors() {
+        String errorList="";
+        for(Character key : charErrors.keySet())
+            errorList=errorList+("Character<"+key+" >: "+this.charErrors.get(key)+" times\n");
+        return errorList;          
+    }
+    
+    // method for  setting list of errors the error as key and value that takes uncorrected char (key) and  check if the character exist in the map it increases the value by one else assigns the number of error equal 1
+    public void setCharErrors(char errorChar) {
+        if(charErrors.containsKey(errorChar)){
+             int numberOfError =charErrors.get(errorChar);
+             charErrors.put(errorChar, numberOfError+1);
+        }
+        else{         
+            charErrors.put(errorChar, 1);
+        } 
     }
     
     // this method is used to create object of the basic class 
