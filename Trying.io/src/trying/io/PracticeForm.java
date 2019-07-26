@@ -1,9 +1,11 @@
+
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
+package trying.io;
 
 /**
  *
@@ -17,6 +19,9 @@ public class PracticeForm extends javax.swing.JFrame {
     public PracticeForm() {
         initComponents();
     }
+    
+    // creating objecct from the BasicClass to deal with typed characters
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
