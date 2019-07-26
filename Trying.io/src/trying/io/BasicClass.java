@@ -22,11 +22,21 @@ import java.util.HashMap;
 
 
 public class BasicClass {
- 
-    private ArrayList<Character> userTypedChars;
+    
+
+    // member variable for storing user typed characters for compare it with orginal text characters and produce charErrors
+    private ArrayList<Character> userTypedChars; 
+    
+    // member variable that store uncorrected character  as "key" and number of errors for each as "value"
     private HashMap<Character,Integer> charErrors;
+    
+    //member varible that stores number of all typed characters which needed for calculate number of words per minute and display in the result form
     private int numberOfTypedChars;
+    
+    // member variable that stores number of uncorrected characters needed for calculate number of words per minute  and display in the result form
     private int numberOfUncorrectChars;
+    
+    // member variable that stores number of words per minute which we calculatee from other member variables and display in the result form 
     private int numberOfWordsPerMin;
     
     
