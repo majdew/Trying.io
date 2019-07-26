@@ -10,9 +10,9 @@ import java.util.ArrayList;
 
 
 /**
- *This class for dealing with text written by the user and list of errors from the GUI application
- * there is a a method for creating object , set and get the value of each member variable 
- * method for counts number of errors per minute  and another method for listing the errors
+ *This class for dealing with the typed characters  written by the user and list of errors from the GUI application
+ * there is a a method for initialize the member variables , set and get the value of each member variable 
+ * method for counts number of words per minute  and  listing the errors .
  * @author majd1
  */
 
