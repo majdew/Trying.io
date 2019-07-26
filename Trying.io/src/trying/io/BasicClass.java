@@ -22,8 +22,17 @@ import java.util.ArrayList;
 
 public class BasicClass {
  
-    
+    private ArrayList<Character> userTypedChars;
     private ArrayList<String> listOfError;
+    
+    // method for return all typed characters 
+    public ArrayList<Character> getUserTypedChars() {
+        return userTypedChars;
+    }
+    // method for assign value to the member variable userTypedChars
+    public void setUserTypedChars(ArrayList<Character> userTypedChars) {
+        this.userTypedChars = userTypedChars;
+    }
     
     // this method is used to create object of the basic class 
     public BasicClass(String userText, ArrayList<String> listOFError) {
