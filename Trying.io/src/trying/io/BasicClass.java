@@ -23,7 +23,7 @@ import java.util.ArrayList;
 public class BasicClass {
  
     private ArrayList<Character> userTypedChars;
-    private ArrayList<String> listOfError;
+    
     
     // method for return all typed characters 
     public ArrayList<Character> getUserTypedChars() {
@@ -37,7 +37,7 @@ public class BasicClass {
     // this method is used to create object of the basic class 
     public BasicClass(String userText, ArrayList<String> listOFError) {
  
-        this.listOfError = listOFError;
+        
     }
     
  
@@ -46,14 +46,6 @@ public class BasicClass {
 
 
     
-    //this method is used to return a list of errors which the user  made
-    public ArrayList<String> getListOfError() {
-        return listOfError;
-    }
-    //this method is used to assign the list of errors  written by the user to the member varriable listOFError 
-    public void setListOFError(ArrayList<String> listOfError) {
-        this.listOfError = listOfError;
-    }
 
 
 }
