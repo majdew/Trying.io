@@ -7,6 +7,8 @@
  */
 package trying.io;
 
+import java.util.Timer;
+
 /**
  *
  * @author majd1
@@ -22,6 +24,9 @@ public class PracticeForm extends javax.swing.JFrame {
     
     // creating objecct from the BasicClass to deal with typed characters
     BasicClass basicClass=new BasicClass();
+    
+    // creating object of timer to perform typing with timer
+    Timer timer=new Timer();
 
     /**
      * This method is called from within the constructor to initialize the form.
