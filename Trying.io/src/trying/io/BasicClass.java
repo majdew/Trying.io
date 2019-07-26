@@ -27,6 +27,7 @@ public class BasicClass {
     private HashMap<Character,Integer> charErrors;
     private int numberOfTypedChars;
     private int numberOfUncorrectChars;
+    private int numberOfWordsPerMin;
     
     
     // method for return all typed characters 
@@ -62,22 +63,33 @@ public class BasicClass {
     }
 
     
-    // method  that takes intger value as parameter represent number of typed characters and no return value
+    // method  that takes intger value as parameter represent number of typed characters and there is no return value
     public void setNumberOfTypedChars(int numberOfTypedChars) {
         this.numberOfTypedChars = numberOfTypedChars;
     }
     
     
-    // method returns integer value represent number of uncorrected characters and takes no parameter
+    // method returns integer value represent number of uncorrected characters and takes no parameter 
     public int getNumberOfUncorrectChars() {
         return numberOfUncorrectChars;
     }
 
     
-    // method that return no parameter takes integer value represent number of uncorrected characters
+    // method that takes integer value represent number of uncorrected characters and there is no return value
     public void getNumberOfUncorrectChars(int NumberOfUncorrectChars) {
         this.numberOfUncorrectChars=numberOfUncorrectChars;
     }
+    
+    // method that returns integer value represent number of words per minute  and takes no parameter
+    public int getNumberOfWordsPerMin() {
+        return numberOfWordsPerMin;
+    }
+
+    //method for setting number of words per minute  using number of typed characters and number of uncorrected characters  no return value  
+    public void setNumberOfWordsPerMin() {
+        this.numberOfWordsPerMin = (numberOfTypedChars/5)-numberOfUncorrectChars;
+    }
+
     
     
     
