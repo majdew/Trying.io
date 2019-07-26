@@ -21,7 +21,7 @@ public class PracticeForm extends javax.swing.JFrame {
     }
     
     // creating objecct from the BasicClass to deal with typed characters
-    
+    BasicClass basicClass=new BasicClass();
 
     /**
      * This method is called from within the constructor to initialize the form.
