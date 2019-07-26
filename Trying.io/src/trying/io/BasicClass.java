@@ -26,6 +26,7 @@ public class BasicClass {
     private ArrayList<Character> userTypedChars;
     private HashMap<Character,Integer> charErrors;
     private int numberOfTypedChars;
+    private int numberOfUncorrectChars;
     
     
     // method for return all typed characters 
@@ -65,6 +66,20 @@ public class BasicClass {
     public void setNumberOfTypedChars(int numberOfTypedChars) {
         this.numberOfTypedChars = numberOfTypedChars;
     }
+    
+    
+    // method returns integer value represent number of uncorrected characters and takes no parameter
+    public int getNumberOfUncorrectChars() {
+        return numberOfUncorrectChars;
+    }
+
+    
+    // method that return no parameter takes integer value represent number of uncorrected characters
+    public void getNumberOfUncorrectChars(int NumberOfUncorrectChars) {
+        this.numberOfUncorrectChars=numberOfUncorrectChars;
+    }
+    
+    
     
     // this method is used to create object of the basic class 
     public BasicClass(String userText, ArrayList<String> listOFError) {
