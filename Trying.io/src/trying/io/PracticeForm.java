@@ -239,6 +239,11 @@ public class PracticeForm extends javax.swing.JFrame {
         if(evt.getKeyChar()!=KeyEvent.VK_BACK_SPACE)
             // add the character to user typed list 
             ( basicClass.getUserTypedChars()).add(userTypedCharacter);
+        else{
+            // get the current position in the list
+            int currentPosition=basicClass.getUserTypedChars().size();
+ 
+        }
   
     }//GEN-LAST:event_userTypedTextAreaKeyPressed
 
