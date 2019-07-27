@@ -194,6 +194,8 @@ public class PracticeForm extends javax.swing.JFrame {
         // create object from "yourResultForm" to view the practice result
         YourResultForm yourResultObject=new YourResultForm();
         
+        // display the result form
+        yourResultObject.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
