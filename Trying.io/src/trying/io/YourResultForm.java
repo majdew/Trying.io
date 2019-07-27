@@ -166,7 +166,6 @@ public class YourResultForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-<<<<<<< HEAD
     public static javax.swing.JTextArea errorListTextArea;
     public static javax.swing.JLabel jLabel1;
     public static javax.swing.JLabel jLabel2;
@@ -176,16 +175,5 @@ public class YourResultForm extends javax.swing.JFrame {
     public static javax.swing.JScrollPane jScrollPane1;
     public static javax.swing.JLabel numberOfErrorsLabel;
     public static javax.swing.JLabel typingSpeedLabel;
-=======
-    private javax.swing.JTextArea errorListTextArea;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel numberOfErrorsLabel;
-    private javax.swing.JLabel typingSpeedLabel;
->>>>>>> GUIDesignBranch
     // End of variables declaration//GEN-END:variables
 }

@@ -182,7 +182,6 @@ public class UploadSourceCode extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-<<<<<<< HEAD
     public static javax.swing.JTextArea codeTextArea;
     public static javax.swing.JLabel jLabel1;
     public static javax.swing.JLabel jLabel3;
@@ -191,15 +190,5 @@ public class UploadSourceCode extends javax.swing.JFrame {
     public static javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JComboBox<String> languageComboBox;
     public static javax.swing.JButton saveButton;
-=======
-    private javax.swing.JTextArea codeTextArea;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JComboBox<String> languageComboBox;
-    private javax.swing.JButton saveButton;
->>>>>>> GUIDesignBranch
     // End of variables declaration//GEN-END:variables
 }

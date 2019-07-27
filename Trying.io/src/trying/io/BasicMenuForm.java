@@ -136,11 +136,7 @@ public class BasicMenuForm extends javax.swing.JFrame {
     }//GEN-LAST:event_uploadSourceCodeButtonActionPerformed
 
     private void practiceButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_practiceButtonActionPerformed
-<<<<<<< HEAD
         //To create a new Frame that leads to practice choices frame 
-=======
-        // TODO add your handling code here:
->>>>>>> GUIDesignBranch
         PracticeChoices practice = new PracticeChoices();
         practice.setVisible(true);
         
