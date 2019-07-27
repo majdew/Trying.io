@@ -231,6 +231,11 @@ public class PracticeForm extends javax.swing.JFrame {
         // get user typed character from the key event
         Character userTypedCharacter=evt.getKeyChar();
         
+        // update the number of typed characters
+        basicClass.setNumberOfTypedChars(basicClass.getNumberOfTypedChars()+1);
+        
+        
+        
     }//GEN-LAST:event_userTypedTextAreaKeyPressed
 
     /**
