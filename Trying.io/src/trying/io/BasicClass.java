@@ -129,6 +129,8 @@ public class BasicClass {
     // method has no return value takes arraylist of characters represent the orginal text it compare user typed chars with orginal chars set error list and number of uncorrected chars
   
     public void compare(ArrayList<Character>orginalText){
+        numberOfUncorrectChars=0;
+        charErrors.clear();
 
         if(userTypedChars.size()<=orginalText.size()){
             for (int i=0;i<userTypedChars.size();i++){
