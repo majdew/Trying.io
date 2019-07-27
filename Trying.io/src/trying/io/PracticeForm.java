@@ -235,14 +235,11 @@ public class PracticeForm extends javax.swing.JFrame {
         // update the number of typed characters
         basicClass.setNumberOfTypedChars(basicClass.getNumberOfTypedChars()+1);
         
-        // check if the key typed is back space to remove the previous character
-        if(evt.getKeyChar()!=KeyEvent.VK_BACK_SPACE){
-         
-        }  
-        
-        
-        
-        
+        // check if the key typed is back space
+        if(evt.getKeyChar()!=KeyEvent.VK_BACK_SPACE)
+            // add the character to user typed list 
+            ( basicClass.getUserTypedChars()).add(userTypedCharacter);
+  
     }//GEN-LAST:event_userTypedTextAreaKeyPressed
 
     /**
