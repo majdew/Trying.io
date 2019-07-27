@@ -76,6 +76,11 @@ public class PracticeForm extends javax.swing.JFrame {
 
         userTypedTextArea.setColumns(20);
         userTypedTextArea.setRows(5);
+        userTypedTextArea.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                userTypedTextAreaKeyPressed(evt);
+            }
+        });
         jScrollPane2.setViewportView(userTypedTextArea);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -215,17 +220,14 @@ public class PracticeForm extends javax.swing.JFrame {
                     
                     // set the value of numberOfWordsPerMinute
                     basicClass.setNumberOfWordsPerMin();
-                    
-                    
-                    
-                    
                 }
-
-                    
-               
             }
         };
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void userTypedTextAreaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_userTypedTextAreaKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_userTypedTextAreaKeyPressed
 
     /**
      * @param args the command line arguments
