@@ -203,6 +203,7 @@ public class PracticeForm extends javax.swing.JFrame {
                 if(timeRemain==0){
                     timeRemain=59; // reset the remaining time
                     userTypedTextArea.setEditable(false); // prevents the user typing
+                    String orginalText=originalTextArea.getText(); // get the orginal text to compare with typed text
                 }
 
                     
