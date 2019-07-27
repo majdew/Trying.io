@@ -213,6 +213,11 @@ public class PracticeForm extends javax.swing.JFrame {
                     // compare the original characters list with user typed text
                     basicClass.compare(originalChar);
                     
+                    // set the value of numberOfWordsPerMinute
+                    basicClass.setNumberOfWordsPerMin();
+                    
+                    
+                    
                     
                 }
 
