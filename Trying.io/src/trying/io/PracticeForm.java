@@ -217,6 +217,7 @@ public class PracticeForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD
     public static javax.swing.JLabel cautionLabel;
     public static javax.swing.JButton exitButton;
     public static javax.swing.JLabel jLabel1;
@@ -231,5 +232,21 @@ public class PracticeForm extends javax.swing.JFrame {
     public static javax.swing.JTextArea originalCodeTextArea;
     public static javax.swing.JLabel timeLabel;
     public static javax.swing.JTextArea userInputCodeTextArea;
+=======
+    private javax.swing.JLabel cautionLabel;
+    private javax.swing.JButton exitButton;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JLabel languageLabel;
+    private javax.swing.JTextArea originalCodeTextArea;
+    private javax.swing.JLabel timeLabel;
+    private javax.swing.JTextArea userInputCodeTextArea;
+>>>>>>> GUIDesignBranch
     // End of variables declaration//GEN-END:variables
 }

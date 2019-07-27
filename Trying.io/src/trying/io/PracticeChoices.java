@@ -138,17 +138,30 @@ public class PracticeChoices extends javax.swing.JPanel {
         String language = languageComboBox.getSelectedItem().toString();
         int time = Integer.parseInt(timeComboBox.getSelectedItem().toString());
         //This will returns the values that was chosen by the user to practice and I'll use it to print it on the Practice form 
+<<<<<<< HEAD
         practice.
+=======
+        languageLabel
+>>>>>>> GUIDesignBranch
     }//GEN-LAST:event_startPracticeButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD
     public static javax.swing.JLabel jLabel1;
     public static javax.swing.JLabel jLabel2;
     public static javax.swing.JLabel jLabel3;
     public static javax.swing.JPanel jPanel1;
     private javax.swing.JComboBox<String> languageComboBox;
     public static javax.swing.JButton startPracticeButton;
+=======
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JComboBox<String> languageComboBox;
+    private javax.swing.JButton startPracticeButton;
+>>>>>>> GUIDesignBranch
     private javax.swing.JComboBox<String> timeComboBox;
     // End of variables declaration//GEN-END:variables
 }
