@@ -17,6 +17,11 @@ public class YourResultForm extends javax.swing.JFrame {
     public YourResultForm() {
         initComponents();
     }
+    
+    // this method for set the text in the typingSpeedLabel
+        public  void setTypingSpeedLabel(int typingSpeed){ 
+        typingSpeedLabel.setText(typingSpeed+" word per minute.");
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
