@@ -19,15 +19,19 @@ public class YourResultForm extends javax.swing.JFrame {
     }
     
     // this method for set the text in the typingSpeedLabel
-        public  void setTypingSpeedLabel(int typingSpeed){ 
+    public  void setTypingSpeedLabel(int typingSpeed){ 
         typingSpeedLabel.setText(typingSpeed+" word per minute.");
     }
     
      // this method for set the text in the numberOfErrorsLabel
-         public  void setNumberOfErrors(int numberOfErrors){
+    public  void setNumberOfErrors(int numberOfErrors){
         numberOfErrorsLabel.setText(numberOfErrors+ " Error");
     }
-         
+    
+    // this method for set the text in the errorListTextArea 
+    public  void  setErrorListTextArea(String errorList){
+        errorListTextArea.setText(errorList);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
