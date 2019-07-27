@@ -210,6 +210,10 @@ public class PracticeForm extends javax.swing.JFrame {
                     for(int i=0;i<originalText.length();i++){
                         originalChar.add(originalText.charAt(i));
                     }
+                    // compare the original characters list with user typed text
+                    basicClass.compare(originalChar);
+                    
+                    
                 }
 
                     
