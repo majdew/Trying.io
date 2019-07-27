@@ -7,6 +7,7 @@
  */
 package trying.io;
 
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -233,6 +234,12 @@ public class PracticeForm extends javax.swing.JFrame {
         
         // update the number of typed characters
         basicClass.setNumberOfTypedChars(basicClass.getNumberOfTypedChars()+1);
+        
+        // check if the key typed is back space to remove the previous character
+        if(evt.getKeyChar()!=KeyEvent.VK_BACK_SPACE){
+         
+        }  
+        
         
         
         
