@@ -1,8 +1,16 @@
+
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package trying.io;
+
+import java.awt.event.KeyEvent;
+import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
 
 
 /**
@@ -17,6 +25,12 @@ public class PracticeForm extends javax.swing.JFrame {
     public PracticeForm() {
         initComponents();
     }
+    
+    // creating objecct from the BasicClass to deal with typed characters
+    BasicClass basicClass=new BasicClass();
+    
+    // creating object of timer to perform typing with timer
+    Timer timer=new Timer();
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -32,14 +46,15 @@ public class PracticeForm extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        timeLabel = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        originalTextArea = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
+        userTypedTextArea = new javax.swing.JTextArea();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -54,18 +69,23 @@ public class PracticeForm extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel4.setText("Time:");
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        timeLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        originalTextArea.setColumns(20);
+        originalTextArea.setRows(5);
+        jScrollPane1.setViewportView(originalTextArea);
 
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jScrollPane2.setViewportView(jTextArea2);
+        userTypedTextArea.setColumns(20);
+        userTypedTextArea.setRows(5);
+        userTypedTextArea.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                userTypedTextAreaKeyPressed(evt);
+            }
+        });
+        jScrollPane2.setViewportView(userTypedTextArea);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel6.setText(" orginal:");
+        jLabel6.setText(" original:");
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel7.setText("user input:");
@@ -78,24 +98,18 @@ public class PracticeForm extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jButton2.setText("start");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 178, Short.MAX_VALUE)
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(40, 40, 40))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -108,10 +122,27 @@ public class PracticeForm extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jLabel7)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(63, 63, 63))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton1)
+                        .addGap(63, 63, 63))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane2)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 178, Short.MAX_VALUE)
+                                .addComponent(jLabel4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(timeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(40, 40, 40))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -126,7 +157,7 @@ public class PracticeForm extends javax.swing.JFrame {
                             .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(timeLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -136,7 +167,9 @@ public class PracticeForm extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
                 .addContainerGap(23, Short.MAX_VALUE))
         );
 
@@ -156,7 +189,89 @@ public class PracticeForm extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        timer.cancel();
+        
+        // create object from "yourResultForm" to view the practice result
+        YourResultForm yourResultObject=new YourResultForm();
+        
+        // display the result form
+        yourResultObject.setVisible(true);
+        
+        // set the text in the "numberOfWordsPerMinute"
+        yourResultObject.setTypingSpeedLabel(basicClass.getNumberOfWordsPerMin());
+        
+        
+        // set the text in the "numberOfUncorrectChars"
+        yourResultObject.setNumberOfErrors(basicClass.getNumberOfUncorrectChars());
+        
+        // set the text in the "errorListTextArea"
+         yourResultObject.setErrorListTextArea(basicClass.getCharErrors());
+        
+
+        
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        
+        // creating object of timer task to perform a task when the timer starts
+        TimerTask timerTask=new TimerTask() {
+            // varible to check if the minute is over 
+            int timeRemain=59;
+            @Override
+            public void run() {
+                //display the timeRemain in the time label
+                timeLabel.setText("00:"+timeRemain);
+                
+                // decreases the remaining time by 1
+                timeRemain--;
+                
+                //check if the remaining time = 0  compare  user typed characters with original text
+                if(timeRemain==0){
+                    timeRemain=59; // reset the remaining time
+                    userTypedTextArea.setEditable(false); // prevents the user typing
+                    String originalText=originalTextArea.getText(); // get the original text to compare with typed text
+                    // transform orginal text to list of characters
+                    ArrayList<Character> originalChar=new ArrayList<>(); 
+                    for(int i=0;i<originalText.length();i++){
+                        originalChar.add(originalText.charAt(i));
+                    }
+                    // compare the original characters list with user typed text
+                    basicClass.compare(originalChar);
+                    
+                    // set the value of numberOfWordsPerMinute
+                    basicClass.setNumberOfWordsPerMin();
+                }
+            }
+           
+        };
+        // set the timer  schedule to perform task every one second for a long time 
+        timer.schedule(timerTask,1000,1000);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void userTypedTextAreaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_userTypedTextAreaKeyPressed
+        // TODO add your handling code here:
+        
+        // get user typed character from the key event
+        Character userTypedCharacter=evt.getKeyChar();
+        
+        // update the number of typed characters
+        basicClass.setNumberOfTypedChars(basicClass.getNumberOfTypedChars()+1);
+        
+        // check if the key typed is back space
+        if(evt.getKeyChar()!=KeyEvent.VK_BACK_SPACE)
+            // add the character to user typed list 
+            ( basicClass.getUserTypedChars()).add(userTypedCharacter);
+        else{
+            // get the current position in the list
+            int currentPosition=basicClass.getUserTypedChars().size();
+            
+            // remove the typed character in the current position before back space
+            basicClass.getUserTypedChars().remove(currentPosition-1);
+ 
+        }
+  
+    }//GEN-LAST:event_userTypedTextAreaKeyPressed
 
     /**
      * @param args the command line arguments
@@ -195,17 +310,18 @@ public class PracticeForm extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JTextArea originalTextArea;
+    private javax.swing.JLabel timeLabel;
+    private javax.swing.JTextArea userTypedTextArea;
     // End of variables declaration//GEN-END:variables
 }
