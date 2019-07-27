@@ -41,7 +41,7 @@ public class BasicMenuForm extends javax.swing.JFrame {
         practiceButton = new javax.swing.JButton();
         exitButton = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
@@ -136,14 +136,9 @@ public class BasicMenuForm extends javax.swing.JFrame {
     }//GEN-LAST:event_uploadSourceCodeButtonActionPerformed
 
     private void practiceButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_practiceButtonActionPerformed
-<<<<<<< HEAD
-        //To create a new Frame that leads to practice choices frame 
 =======
         // TODO add your handling code here:
->>>>>>> GUIDesignBranch
-        PracticeChoices practice = new PracticeChoices();
         practice.setVisible(true);
-        
         
     }//GEN-LAST:event_practiceButtonActionPerformed
 
