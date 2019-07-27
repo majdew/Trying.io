@@ -242,6 +242,9 @@ public class PracticeForm extends javax.swing.JFrame {
         else{
             // get the current position in the list
             int currentPosition=basicClass.getUserTypedChars().size();
+            
+            // remove the typed character in the current position before back space
+            basicClass.getUserTypedChars().remove(currentPosition-1);
  
         }
   
