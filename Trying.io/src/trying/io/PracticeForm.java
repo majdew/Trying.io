@@ -204,6 +204,9 @@ public class PracticeForm extends javax.swing.JFrame {
         // set the text in the "numberOfUncorrectChars"
         yourResultObject.setNumberOfErrors(basicClass.getNumberOfUncorrectChars());
         
+        // set the text in the "errorListTextArea"
+         yourResultObject.setErrorListTextArea(basicClass.getCharErrors());
+        
 
         
     }//GEN-LAST:event_jButton1ActionPerformed
