@@ -10,3 +10,4 @@ string answerQuestion(string q)
 	return a;
 }
  
+1********************
