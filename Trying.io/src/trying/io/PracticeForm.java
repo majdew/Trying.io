@@ -7,6 +7,7 @@
  */
 package trying.io;
 
+import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -203,7 +204,12 @@ public class PracticeForm extends javax.swing.JFrame {
                 if(timeRemain==0){
                     timeRemain=59; // reset the remaining time
                     userTypedTextArea.setEditable(false); // prevents the user typing
-                    String orginalText=originalTextArea.getText(); // get the orginal text to compare with typed text
+                    String originalText=originalTextArea.getText(); // get the original text to compare with typed text
+                    // transform orginal text to list of characters
+                    ArrayList<Character> originalChar=new ArrayList<>(); 
+                    for(int i=0;i<originalText.length();i++){
+                        originalChar.add(originalText.charAt(i));
+                    }
                 }
 
                     
