@@ -10,6 +10,7 @@ package trying.io;
 import java.util.Timer;
 import java.util.TimerTask;
 
+
 /**
  *
  * @author majd1
@@ -197,11 +198,16 @@ public class PracticeForm extends javax.swing.JFrame {
                 
                 // decreases the remaining time by 1
                 timeRemain--;
+                
+                //check if the remaining time = 0  compare  user typed characters with original text
+                if(timeRemain==0){
+                    
+                }
 
                     
                
             }
-        }
+        };
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
