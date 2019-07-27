@@ -46,7 +46,7 @@ public class PracticeForm extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         timeLabel = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        originalTextArea = new javax.swing.JTextArea();
         jScrollPane2 = new javax.swing.JScrollPane();
         userTypedTextArea = new javax.swing.JTextArea();
         jLabel6 = new javax.swing.JLabel();
@@ -69,16 +69,16 @@ public class PracticeForm extends javax.swing.JFrame {
 
         timeLabel.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        originalTextArea.setColumns(20);
+        originalTextArea.setRows(5);
+        jScrollPane1.setViewportView(originalTextArea);
 
         userTypedTextArea.setColumns(20);
         userTypedTextArea.setRows(5);
         jScrollPane2.setViewportView(userTypedTextArea);
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel6.setText(" orginal:");
+        jLabel6.setText(" original:");
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel7.setText("user input:");
@@ -257,7 +257,7 @@ public class PracticeForm extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea originalTextArea;
     private javax.swing.JLabel timeLabel;
     private javax.swing.JTextArea userTypedTextArea;
     // End of variables declaration//GEN-END:variables
