@@ -243,7 +243,10 @@ public class PracticeForm extends javax.swing.JFrame {
                     basicClass.setNumberOfWordsPerMin();
                 }
             }
+           
         };
+        // set the timer  schedule to perform task every one second for a long time 
+        timer.schedule(timerTask,1000,1000);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void userTypedTextAreaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_userTypedTextAreaKeyPressed
