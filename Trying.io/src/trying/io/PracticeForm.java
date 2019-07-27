@@ -227,6 +227,10 @@ public class PracticeForm extends javax.swing.JFrame {
 
     private void userTypedTextAreaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_userTypedTextAreaKeyPressed
         // TODO add your handling code here:
+        
+        // get user typed character from the key event
+        Character userTypedCharacter=evt.getKeyChar();
+        
     }//GEN-LAST:event_userTypedTextAreaKeyPressed
 
     /**
