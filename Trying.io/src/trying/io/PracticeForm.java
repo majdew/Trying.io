@@ -201,7 +201,7 @@ public class PracticeForm extends javax.swing.JFrame {
                 
                 //check if the remaining time = 0  compare  user typed characters with original text
                 if(timeRemain==0){
-                    
+                    timeRemain=59; // reset the remaining time
                 }
 
                     
