@@ -199,6 +199,13 @@ public class PracticeForm extends javax.swing.JFrame {
         
         // set the text in the "numberOfWordsPerMinute"
         yourResultObject.setTypingSpeedLabel(basicClass.getNumberOfWordsPerMin());
+        
+        
+        // set the text in the "numberOfUncorrectChars"
+        yourResultObject.setNumberOfErrors(basicClass.getNumberOfUncorrectChars());
+        
+
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
